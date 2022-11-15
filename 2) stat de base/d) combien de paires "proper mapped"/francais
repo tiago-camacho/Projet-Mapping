@@ -1,1 +1,7 @@
+test si :
+- flag calcul flag - mod flag inf le plus proche jusqu'à 0 
+
+dictionnaire avec les chiffres des flags (SAM format Flag) et les clés correspondantes
+prendre colonne 2 du fichier et faire les modulo pour avoir les caractéristiques du flag 
+il faut : taille d'insert ok, orientation OK et les deux read soient mappés
 
