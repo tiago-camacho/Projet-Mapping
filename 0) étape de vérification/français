@@ -1,2 +1,3 @@
-Vérifier que l'extention est un .SAM 
+Vérifier que l'extention est un .SAM si .bam message d'erreur demandant à l'utilisateur de mettre un .sam
 Que ce n'est pas un fichier vide 
+que ce n'est pas un répertoire mais bien un fichier 
