@@ -5,3 +5,4 @@ dictionnaire avec les chiffres des flags (SAM format Flag) et les clés correspo
 prendre colonne 2 du fichier et faire les modulo pour avoir les caractéristiques du flag 
 il faut : taille d'insert ok, orientation OK et les deux read soient mappés
 
+TIAGO
