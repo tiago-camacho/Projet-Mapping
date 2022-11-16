@@ -1,3 +1,4 @@
 # Projet-Mapping
-Il faut que l'utilisateur se mette dans le répertoire où se trouve son fichier .sam
-en premier paramètre l'utilisateur doit entrer le nom du fichier .sam file_name en deuxième paramètre l'utilisateur doit entrer la qualité demandée
+Il faut que l'utilisateur entre le chemin ou se trouve le fichier Argument 1
+Il faut que l'utilisateur se mette dans le répertoire où se trouve son fichier .sam Argument 2
+Il faut que l'utilisateur entre la qualité demandée argument 3
