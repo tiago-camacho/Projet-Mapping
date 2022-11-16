@@ -3,6 +3,6 @@ test si :
 
 dictionnaire avec les chiffres des flags (SAM format Flag) et les clés correspondantes
 prendre colonne 2 du fichier et faire les modulo pour avoir les caractéristiques du flag 
-il faut : taille d'insert ok, orientation OK et les deux read soient mappés
+il faut : taille d'insert ok, orientation OK et les deux read soient mappés flag 2 
 
 TIAGO
