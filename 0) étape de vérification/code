@@ -1,4 +1,8 @@
+Vérifier que ce n'est pas un répertoire mais bien un fichier Ally
 
+Vérifier que l'extention est un .SAM si .bam message d'erreur demandant à l'utilisateur de mettre un .sam Tiago
+
+Vérifier que ce n'est pas un fichier vide Ally
 {
  "cells": [
   {
