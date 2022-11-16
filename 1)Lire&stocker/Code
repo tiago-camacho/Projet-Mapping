@@ -1,1 +1,4 @@
+file =open(sys.argv[1])
 
+lines = readlines(file)
+for line line in lines:
