@@ -1,1 +1,3 @@
-
+compteur = 0
+for cle, valeur in dico.items(): 
+    compteur += len(valeur)
