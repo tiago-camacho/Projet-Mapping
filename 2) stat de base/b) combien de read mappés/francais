@@ -1,2 +1,3 @@
-enleve toute les lignes où la position et la reférence = * 
+enleve toute les lignes où la position = 0 et la reférence = * 
 ALLY
+Si flag = 4 c'est non mappé on les ignore
