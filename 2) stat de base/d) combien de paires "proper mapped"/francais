@@ -6,3 +6,20 @@ prendre colonne 2 du fichier et faire les modulo pour avoir les caractéristique
 il faut : taille d'insert ok, orientation OK et les deux read soient mappés flag 2 
 
 TIAGO
+
+Création dico 
+clé flag valeur information sur le flag
+
+algo de calcule 
+Si X-2048 >0 alors
+X<-2048
+Clé 2048
+Sinon X<-X
+Si X-1024 >0alors
+X<-x-1024
+Clé 1024
+Sinon 
+X<-X
+Etc 
+Jusqu’a 0 
+
