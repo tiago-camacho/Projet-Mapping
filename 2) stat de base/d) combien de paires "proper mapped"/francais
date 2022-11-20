@@ -11,15 +11,69 @@ Création dico
 clé flag valeur information sur le flag
 
 algo de calcule 
-Si X-2048 >0 alors
-X<-2048
-Clé 2048
+Si x=0 alors 
+Break
+Sinon
+  Si X-2048 >=0 alors
+    X<-2048
+    Clé 2048
+  Sinon 
+    X<-X
+  Fin si
+  Si X-1024 >=0 alors
+    X<-x-1024
+    Clé 1024
+  Sinon 
+    X<-X
+  Fin si
+  Si X-512 >=0 alors
+X<-512
+Clé 512
 Sinon X<-X
-Si X-1024 >0alors
-X<-x-1024
-Clé 1024
-Sinon 
-X<-X
-Etc 
-Jusqu’a 0 
+Fin si
+Si X-256 >=0 alors
+X<-256
+Clé 256
+Sinon X<-X
+Fin si
+Si X-128 >=0 alors
+X<-128
+Clé 128
+Sinon X<-X
+Fin si
+Si X-64 >=0 alors
+X<-64
+Clé 64
+Sinon X<-X
+Fin si
+Si X-32 >=0 alors
+X<-32
+Clé 32
+Sinon X<-X
+Fin si
+Si X-16 >=0 alors
+X<-16
+Clé 16
+Sinon X<-X
+Fin si
+Si X-8 >=0 alors
+X<-8
+Clé 8
+Sinon X<-X
+Fin si
+Si X-4 >+0 alors
+X<-4
+Clé 4
+Sinon X<-X
+Fin si
+Si X-2 >=0 alors
+X<-2
+Clé 2
+Sinon X<-X
+Fin si
+Si X-1 >=0 alors
+X<-1
+Clé 1
+Sinon X<-X
+Fin si
 
