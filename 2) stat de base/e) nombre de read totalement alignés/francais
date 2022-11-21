@@ -2,3 +2,11 @@ test CIGAR = 100M veut dire que c'est totalement mappé  TIAGO !
 
 on selectionne seulement les lignes qui vérifie cette information 
 on veut seulement qu'il compte ou bien qu'il tire ?
+
+
+Pour i de 0 a n+1 par pas de 1
+si colone cigar = 100M alors 
+compteur +1
+i+1
+sinon 
+i+1
