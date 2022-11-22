@@ -3,7 +3,10 @@
 import sys, os
 file = sys.argv[1]
 verif=verif.py(file)
-if verif=="T" : 
+if verif !="T" : 
+  exit()
+else : 
+  print("fichier ok")
   
   
   
