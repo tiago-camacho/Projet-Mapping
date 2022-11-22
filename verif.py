@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
 
-import sys
-import os
-
 #Vérifier que ce n'est pas un répertoire mais bien un fichier
 
-file_name=sys.argv[1]
 
-if os.path.isdir(file_name) == 1:
+
+if os.path.isdir(file) == 1:
     print("veuillez donner un fichier et non pas un répertoire")
     return "F"
 
@@ -15,12 +12,12 @@ if os.path.isdir(file_name) == 1:
 
 if file_name.split(".")[-1] != "sam" :
     print("veuillez donner un fichier dont l'extension est .sam")
-    exit ()
+    return "F"
     
 #Vérifier que ce n'est pas un fichier vide 
 
 if os.path.getsize(file_name) == 0:
     print("Le fichier est vide")
-    exit()
+    return "F"
 
-return "ok"
+return "T"
