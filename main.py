@@ -8,11 +8,7 @@ if verif !="T" :
 else : 
   print("fichier ok")
   
-  
-  
 read_dico.py
-
-
 
 number_of_data.py 
 
