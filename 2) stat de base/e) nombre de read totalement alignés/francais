@@ -1,7 +1,10 @@
-test CIGAR = 100M veut dire que c'est totalement mappé  TIAGO !
+test CIGAR = nombre de 1,2 ou 3 chiffre)+M veut dire que c'est totalement mappé  TIAGO !
+si != M pas bien mappé 
+[1-500]M
+[0-9][0-9][0-9]M ou [0-9][0-9]M
 
 on selectionne seulement les lignes qui vérifie cette information 
-on veut seulement qu'il compte ou bien qu'il tirer ?
+
 
 
 Pour i de 0 a n+1 par pas de 1
