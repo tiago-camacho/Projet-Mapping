@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 import sys
 import os
@@ -10,12 +11,13 @@ if os.path.isdir(file_name) == 1:
     print("veuillez donner un fichier et non pas un répertoire")
     return "F"
 
-Vérifier que l'extention est un .SAM si .bam message d'erreur demandant à l'utilisateur de mettre un .sam Tiago
+#Vérifier que l'extention est un .SAM si .bam message d'erreur demandant à l'utilisateur de mettre un .sam 
+
 if file_name.split(".")[-1] != "sam" :
     print("veuillez donner un fichier dont l'extension est .sam")
     exit ()
     
-Vérifier que ce n'est pas un fichier vide Ally
+#Vérifier que ce n'est pas un fichier vide 
 
 if os.path.getsize(file_name) == 0:
     print("Le fichier est vide")
