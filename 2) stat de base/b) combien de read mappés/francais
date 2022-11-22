@@ -1,3 +1,8 @@
-enleve toute les lignes où la position = 0 OU * et la reférence = 0 OU * 
+enleve toute les lignes où la position (2) = 0 OU * et la reférence(1) = 0 OU * 
 ALLY
 Si flag = 4 c'est non mappé on les ignore
+
+
+for valeur in dico
+  if colone1 =(0 or*) or colone2=(0or*) 
+    efface valeur 
