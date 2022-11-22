@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
-file =open(sys.argv[1])
-
 dico = {}
+file =open(sys.argv[1])
 lines = file.readlines()
 
 for line in lines:
