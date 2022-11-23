@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 Pour toutes les valeurs dans le dico 
-     si flag=4 (unmapped) ou si flag=
+     si colonne 1 (index 0 de valeur) contient un modulo de son calcul de flag =  4 (unmapped) ou 8 (mate unmapped) alors supprimer la clé
+     à mettre direct dans la création du dico 
 X=1000 #X de test à changer en focntion du flag 
 a = {}
 if X-2048 >=0:
