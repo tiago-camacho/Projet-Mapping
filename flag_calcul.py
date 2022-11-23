@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
-
-X=1000 #X de test à changé en focntion du flag 
+Pour toutes les valeurs dans le dico 
+     si flag=4 (unmapped) ou si flag=
+X=1000 #X de test à changer en focntion du flag 
 a = {}
 if X-2048 >=0:
      X=X-2048
      a[1]=  2048
-else:
-     X=X
-  
+#else:
+  #   X=X
+
 if X-1024 >=0:
     X=X-1024
     a[2] = 1024
-else:
-    X=X
+#else:
+ #   X=X
   
 if X-512 >=0:
      X=X-512
