@@ -12,8 +12,6 @@ read_dico.py
 
 number_of_data.py 
 
-
-
 flag_calcul.py
 
 
