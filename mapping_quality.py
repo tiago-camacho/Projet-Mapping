@@ -1,4 +1,4 @@
-#!/bin/usr
+#!/usr/bin/env python3
 test CIGAR = nombre de 1,2 ou 3 chiffre)+M veut dire que c'est totalement mappé  TIAGO !
 si != M pas bien mappé 
 [1-500]M
