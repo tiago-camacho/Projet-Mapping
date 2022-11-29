@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+X = cle,valeur in dico.items() [0]
+
 X=1000 #X de test à changer en focntion du flag 
 a = {}
 if X-2048 >=0:
