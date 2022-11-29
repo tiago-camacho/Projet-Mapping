@@ -16,6 +16,10 @@
 #sinon 
 #i+1
 
-for key , valeur in dico 
-  if (colone5) == ([0-9][0-9][0-9]M or [0-9][0-9]M);
+totally_aligned = [];
+valeur = dico.values()
+for  valeur in dico 
+  if (colone5) != ([0-9][0-9][0-9]M or [0-9][0-9]M);
+     del dico[key]
+  
     
