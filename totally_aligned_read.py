@@ -15,11 +15,15 @@
 #i+1
 #sinon 
 #i+1
-
+for key,value in dico.items():
+  a finir 
+  
+  
+  
+  
+  
 totally_aligned = [];
 valeur = dico.values()
 for  valeur in dico 
   if (colone5) != ([0-9][0-9][0-9]M or [0-9][0-9]M);
      del dico[key]
-  
-    
