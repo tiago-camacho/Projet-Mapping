@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 #est-ce que ces lignes de code prennent bien en compte la 1er élément de la valeur du dico
-for cle,valeur in dico.items() [0]
+for cle,valeur in dico.items() [0] : 
+     for valeur in dico.items() [0][]
 
 a = {}
 if X-2048 >=0:
@@ -41,3 +42,5 @@ if X-1 >=0:
      X=X-1
      a[1]= "Read paired"
 a
+
+if 
