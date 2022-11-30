@@ -6,3 +6,10 @@ Si flag = 4 c'est non mappé on les ignore
 for valeur in dico
   if colone1 =(0 or*) or colone2=(0or*) 
     efface valeur 
+
+for cle,valeur in dico.items() [1] :
+  if 
+
+
+
+cle,valeur in dico.items() [0]
