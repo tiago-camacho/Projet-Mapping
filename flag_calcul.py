@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #est-ce que ces lignes de code prennent bien en compte la 1er élément de la valeur du dico
-X = cle,valeur in dico.items() [0]
+for cle,valeur in dico.items() [0]
 
 a = {}
 if X-2048 >=0:
