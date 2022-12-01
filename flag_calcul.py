@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-#est-ce que ces lignes de code prennent bien en compte la 1er élément de la valeur du dico? oui 
-for cle,valeur in dico.items() : 
-     for v in valeur [0]:
+#est-ce que ces lignes de code prennent bien en compte le 1er élément de la valeur du dico? oui 
+for key,value in dico.items() : 
+     for v in value [0]:
 
 a = {}
 if X-2048 >=0:
