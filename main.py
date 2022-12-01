@@ -53,9 +53,12 @@ file.close()
 number_total_of_data_counter = 0
 for key, value in dico.items(): 
 number_total_of_data_counter += len(valeur)
-print("number_total_of_data_counter ="+number_total_of_data_counter)
+print("number_total_of_data_counter ="+number_total_of_data_counter)#number total of reads
 
-#counting your paired reads
+##save this number into a summary file A FINIR J'ARRIVE PAS 
+summary.write("Number of paired reads = " \n) 
+
+#counting your paired reads#number total of paired reads
 number_of_paired_reads_data_counter = 0
 for key, value in dico.items(): 
    if key, value in dico.item() (!= 2) :
@@ -64,70 +67,43 @@ for key, value in dico.items():
         number_of_paired_reads_data_counter += 1
 print("number_of_paired_reads_data_counter = "+number_of_paired_reads_data_counter)
 
+
 ######################################################### counting your number of mapped read  #####################################################################
 for key, value in dico.items() : 
   for v in value :
     if v[0] & 4 != 4 : 
         pair_not_proper_mapped[key] = value
         del dico[key]
-   
-      
-pour savoir si deux clones sont bien mappés en face  : 
-  
-  f16 = 16
-  F32 = 32
-  for key,value in dico.items():
-    if int(value[0][0]) & 16 or int(value[1][0]) & 32 and int(value[1][0]) & 32 or int(value[0][0]) :
         
         
 ################################################################## mapping quality #################################################################################
-si la colonne 3 de notre value dans le dico > ou = à sys.argv[3]
-compter faire un dico et supprimer dans le grand dico
-
+for key, value in dico.items() : 
+    for v in value :
+        if v[3] < sys.argv[3] or != [0-9] or != [0-9][0-9] or != [0-9][0-9][0-9]: #if mapping quality colon is under your exigence or not a number 
+            bad_mapping_quality[key] = value
+            del dico[key]
 ################################################################### number of pair proper mapped  ###################################################################
-
 pair_not_proper_mapped={}
 counter =+0
 
 flag = 2, 16, 32 et si position [6] 
 
- f16 = 16
- f32 = 32
   for key,value in dico.items():
     if int(value[0][0]) & 2==2 and int(value[1][0]) & 2==2 :
         if (int(value[0][0]) & 16==16 and int(value[1][0]) & 32==32) or (int(value[0][0]) & 32==32 and int(value[1][0]) & 16==16) :
             if abs((value [0][2])-(value[1][2]))<=sys.argv[2]
                counter += 1
                continue 
-     pair_not_proper_mapped[key] = value
-     del dico[key]
+     else :
+        pair_not_proper_mapped[key] = value
+        del dico[key]
 
 #####################################################################  totaly aligned read  ########################################################################
 
-#test CIGAR = nombre de 1,2 ou 3 chiffre)+M veut dire que c'est totalement mappé  TIAGO !
-#si != M pas bien mappé 
-#[1-500]M
-#[0-9][0-9][0-9]M ou [0-9][0-9]M
+for key, value in dico.items() : 
+    for v in value :
+        if v[4] != ([0-9][0-9][0-9]M or [0-9][0-9]M)
+           not_totaly_aligned_read[key] = value
+            del dico[key]
 
-#on selectionne seulement les lignes qui vérifie cette information 
-
-
-
-#Pour i de 0 a n+1 par pas de 1
-#si colone cigar = 100M alors 
-#compteur +1
-#i+1
-#sinon 
-#i+1
-for key,value in dico.items():
-  a finir 
-  
-  
-  
-  
-  
-totally_aligned = [];
-valeur = dico.values()
-for  valeur in dico 
-  if (colone5) != ([0-9][0-9][0-9]M or [0-9][0-9]M);
-     del dico[key]
+    
