@@ -2,25 +2,40 @@
 
 import sys, os
 ###########################################################  verification of your file  #############################################################################
-if os.path.isdir(sys.argv[1]) == 1:
-    print("veuillez donner un fichier et non pas un répertoire")
-    return "F"
 
-if (sys.argv[1]).split(".")[-1] != "sam" :
-    print("veuillez donner un fichier dont l'extension est .sam")
-    return "F"
-
-if os.path.getsize(sys.argv[1]) == 0:
-    print("Le fichier est vide")
-    return "F"
-return "T"
-  exit()
-else : 
-  print("fichier ok")
+    if os.path.isdir(sys.argv[1]) == 1:
+        
+        if (sys.argv[1]).split(".")[-1] == "sam" :
+            
+            if os.path.getsize(sys.argv[1]) != 0:
+                
+                file = open(sys.argv[1], "r")
+                for line in file :
+                    line_col = line.split("\t")
+                    if len(line_col) >= 11 :
+                        pass
+                        
+                    else  : 
+                    print("Your file is not a .sam format")
+                    break
+            else :
+            print("your file is empty")
+            break
+        
+        else :
+        print("Please give a .sam file")
+        break
+        
+    else : 
+    ("please give a file and not a directory")
+    break
+    
+print("Your file seems correct")
   
 ##################################################### create a dictionnary of your file.sam  ########################################################################
+
 dico = {}
-file =open(sys.argv[1])
+file =open(sys.argv[1], "r")
 lines = file.readlines()
 
 for line in lines:
@@ -35,26 +50,27 @@ file.close()
 
 ################################################################## counting your starting data number  ##############################################################
 
-#compte toute les valeur dans le dico
 number_total_of_data_counter = 0
-for cle, valeur in dico.items(): 
+for key, value in dico.items(): 
 number_total_of_data_counter += len(valeur)
 print("number_total_of_data_counter ="+number_total_of_data_counter)
 
-#compte toute les paire dans le dico
+#counting your paired reads
 number_of_paired_reads_data_counter = 0
-for cle, valeur in dico.items(): 
-   if cle, valeur in dico.item() (!= 2) :
+for key, value in dico.items(): 
+   if key, value in dico.item() (!= 2) :
     number_of_paired_reads_data_counter += 0
-    else : 
- number_of_paired_reads_data_counter += len(valeur)
-print("number_of_paired_reads_data_counter =" number_of_paired_reads_data_counter)
+    else :
+        number_of_paired_reads_data_counter += 1
+print("number_of_paired_reads_data_counter = "+number_of_paired_reads_data_counter)
 
 ######################################################### counting your number of mapped read  #####################################################################
-for cle, valeur in dico.items() : 
-  for v in valeur :
+for key, value in dico.items() : 
+  for v in value :
     if v[0] & 4 != 4 : 
-      del dico cle valeur
+        pair_not_proper_mapped[key] = value
+        del dico[key]
+   
       
 pour savoir si deux clones sont bien mappés en face  : 
   
