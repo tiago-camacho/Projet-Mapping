@@ -54,11 +54,20 @@ for cle, valeur in dico.items():
  number_of_paired_reads_data_counter += len(valeur)
 print("number_of_paired_reads_data_counter =" number_of_paired_reads_data_counter)
 
-flag_calcul.py
-
-
-number_of_mapped_read.py
-
+## counting your number of mapped read
+for cle, valeur in dico.items() : 
+  for v in valeur :
+    if v[0] & 4 != 4 : 
+      del dico cle valeur
+      
+pour savoir si deux clones sont bien mappés en face  : 
+  
+  f16 = 16
+  F32 = 32
+  for key,value in dico.items():
+    if int(value[0][0]) & 16 or int(value[1][0]) & 32 and int(value[1][0]) & 32 or int(value[0][0]) :
+        
+        
 mapping_quality.py
 
 pair_propper_mapped.py 
