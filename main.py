@@ -68,7 +68,9 @@ pour savoir si deux clones sont bien mappés en face  :
     if int(value[0][0]) & 16 or int(value[1][0]) & 32 and int(value[1][0]) & 32 or int(value[0][0]) :
         
         
-mapping_quality.py
+## mapping quality 
+si la colonne 3 de notre value dans le dico > ou = à sys.argv[3]
+compter faire un dico et supprimer dans le grand dico
 
 pair_propper_mapped.py 
 
