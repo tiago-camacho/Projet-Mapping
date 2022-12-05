@@ -28,10 +28,8 @@ if os.path.isdir(sys.argv[1]) == 1: #if your path is a directory
             print("your file is empty")
     else :
         print("Please give a .sam file")
-    break
 else : 
     ("please give a file and not a directory")
-break
 print("Your file seems correct")
   
 ##################################################### create a dictionnary of your file.sam  ########################################################################
