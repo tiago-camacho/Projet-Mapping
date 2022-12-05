@@ -19,9 +19,9 @@ if os.path.isdir(sys.argv[1]) == 1: #if your path is a directory
             file = open(sys.argv[1], "r")#it open the file
             for line in file :
                 line_col = line.split("\t")#split the line
-                    if len(line_col) >= 11 :#verify that the format look like a sam format with the minimal number of columns
-                        pass   
-                    else  : 
+                if len(line_col) >= 11 :#verify that the format look like a sam format with the minimal number of columns
+                    pass
+                else  : 
                     print("Your file is not a .sam format")
                     break
         else :
