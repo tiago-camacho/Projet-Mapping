@@ -117,6 +117,6 @@ for key, value in dico.items() :
            not_totally_aligned_read[key] = value #the value not totally aligned is stored in an other dictionnary in case you need it
            del dico[key] #the key is erased from the starting dictionnary
         else : 
-      totally_aligned_read_counter += 1
+            totally_aligned_read_counter += 1
 print("you have "+totally_aligned_read_counter+" read totally aligned ")
     
