@@ -3,11 +3,10 @@
 
 import sys, os
 ###########################################################  verification of your file  #############################################################################
-
-    if os.path.isdir(sys.argv[1]) == 1:
-        if (sys.argv[1]).split(".")[-1] == "sam" :
-            if os.path.getsize(sys.argv[1]) != 0:
-                file = open(sys.argv[1], "r")
+if os.path.isdir(sys.argv[1]) == 1:
+    if (sys.argv[1]).split(".")[-1] == "sam" :
+        if os.path.getsize(sys.argv[1]) != 0 :
+            file = open(sys.argv[1], "r")
                 for line in file :
                     line_col = line.split("\t")
                     if len(line_col) >= 11 :
@@ -15,13 +14,13 @@ import sys, os
                     else  : 
                     print("Your file is not a .sam format")
                     break
-            else :
+        else :
             print("your file is empty")
             break
-        else :
+    else :
         print("Please give a .sam file")
         break
-    else : 
+else : 
     ("please give a file and not a directory")
     break
 print("Your file seems correct")
