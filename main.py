@@ -113,7 +113,7 @@ not_totally_aligned_read={}
 totally_aligned_read_counter +=0
 for key, value in dico.items() : 
     for v in value :
-        if v[4] != (([0-9][0-9][0-9]M) or ([0-9][0-9]M)) #if your CIGAR column does not contain 2 or 3 number followed by the letter M
+        if v[4].find([0-9][0-9][0-9]M) or  v[4].find([0-9][0-9]M) #if your CIGAR column does not contain 2 or 3 number followed by the letter M
            not_totally_aligned_read[key] = value #the value not totally aligned is stored in an other dictionnary in case you need it
            del dico[key] #the key is erased from the starting dictionnary
         else : 
