@@ -87,7 +87,7 @@ good_mapping_quality_number += 0
       
 for key, value in dico.items() : 
     for v in value :
-        if v[3] < sys.argv[3] or != [0-9] or != [0-9][0-9] or != [0-9][0-9][0-9]: #if mapping quality colon is under your exigence or not a number 
+        if v[3] < sys.argv[3] or v[3] != [0-9] or v[3] != [0-9][0-9] or v[3] != [0-9][0-9][0-9]: #if mapping quality colon is under your exigence or not a number 
             bad_mapping_quality[key] = value #the read is stored in an other dictionnary in case you need it
             del dico[key] #the key is erased from the starting dictionnary 
         else : 
