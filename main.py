@@ -68,7 +68,7 @@ print("you have "+str(number_of_paired_reads_data_counter)+" paired reads")
 ######################################################### counting your number of mapped read  #####################################################################
 pair_not_proper_mapped={}
 pair_mapped_counter = 0
-for key, value in dico.items() : 
+for key in dico.items() : 
   for v in value : #for the columns in the list contained in the value 
     if v[0] & 4 != 4 : #if the flag (column 1) does not contains 4 (binary reading) 
         pair_mapped_counter += 0
