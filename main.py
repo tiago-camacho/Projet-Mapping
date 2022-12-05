@@ -52,8 +52,8 @@ file.close()
 
 number_total_of_data_counter = 0
 for key, value in dico.items(): 
-    str(number_total_of_data_counter) += len(value)#counting all your reads in the dico that we created
-print("you have "+number_total_of_data_counter+" reads in total")#number total of reads
+    number_total_of_data_counter += len(value)#counting all your reads in the dico that we created
+print("you have "+str(number_total_of_data_counter)+" reads in total")#number total of reads
 
 #counting the total number of paired reads
 number_of_paired_reads_data_counter += 0
