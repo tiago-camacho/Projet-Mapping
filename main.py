@@ -9,9 +9,9 @@ if os.path.isdir(sys.argv[1]) == 1:
             file = open(sys.argv[1], "r")
             for line in file :
                 line_col = line.split("\t")
-                    if len(line_col) >= 11 :
-                        pass   
-                    else  : 
+                if len(line_col) >= 11 :
+                    pass
+                else  : 
                     print("Your file is not a .sam format")
                     break
         else :
