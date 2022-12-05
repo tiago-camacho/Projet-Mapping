@@ -64,7 +64,7 @@ for key, value in dico.items():
     number_of_paired_reads_data_counter += 0#it didn't count the key because the read is not mated
    else :
     number_of_paired_reads_data_counter += 1 
-print("you have "+number_of_paired_reads_data_counter+" paired reads)
+print("you have "+number_of_paired_reads_data_counter" + paired reads)
 
 
 ######################################################### counting your number of mapped read  #####################################################################
