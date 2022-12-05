@@ -56,18 +56,18 @@ for key, value in dico.items():
 print("you have "+str(number_total_of_data_counter)+" reads in total")#number total of reads
 
 #counting the total number of paired reads
-number_of_paired_reads_data_counter += 0
+number_of_paired_reads_data_counter = 0
 for key, value in dico.items(): 
    if value in dico.item() (value != 2) : #if the key does not contains 2 values
     number_of_paired_reads_data_counter += 0#it didn't count the key because the read is not mated
    else :
     number_of_paired_reads_data_counter += 1 
-print("you have "+number_of_paired_reads_data_counter+" paired reads")
+print("you have "+str(number_of_paired_reads_data_counter)+" paired reads")
 
 
 ######################################################### counting your number of mapped read  #####################################################################
 pair_not_proper_mapped={}
-pair_mapped_counter += 0
+pair_mapped_counter = 0
 for key, value in dico.items() : 
   for v in value : #for the columns in the list contained in the value 
     if v[0] & 4 != 4 : #if the flag (column 1) does not contains 4 (binary reading) 
@@ -76,12 +76,12 @@ for key, value in dico.items() :
         del dico[key]#the key is erased from the starting dictionnary 
     else : 
         pair_mapped_counter += 1
-print("you have "+pair_mapped_counter+" pair mapped")
+print("you have "+str(pair_mapped_counter)+" pair mapped")
 
         
 ################################################################## mapping quality #################################################################################
 bad_mapping_quality={}
-good_mapping_quality_number += 0
+good_mapping_quality_number = 0
       
 for key, value in dico.items() : 
     for v in value :
@@ -90,11 +90,11 @@ for key, value in dico.items() :
             del dico[key] #the key is erased from the starting dictionnary 
         else : 
             good_mapping_quality_number += 1
-print("you have "+good_mapping_quality_number+" mapping of good quality")
+print("you have "+str(good_mapping_quality_number)+" mapping of good quality")
       
 ################################################################### number of pair proper mapped  ###################################################################
 pair_not_proper_mapped={}
-pair_poper_mapped_counter += 0
+pair_poper_mapped_counter = 0
 for key,value in dico.items():
     if int(value[0][0]) & 2==2 and int(value[1][0]) & 2==2 :#if your flag = 2 in both of your mate reads
         if (int(value[0][0]) & 16==16 and int(value[1][0]) & 32==32) or (int(value[0][0]) & 32==32 and int(value[1][0]) & 16==16) :#if they are mated
@@ -104,11 +104,11 @@ for key,value in dico.items():
     else :
         pair_not_proper_mapped[key] = value #the read is stored in an other dictionnary in case you need it
         del dico[key] #the key is erased from the starting dictionnary 
-print("you have "+pair_poper_mapped_counter+" pair proper mapped")
+print("you have "+str(pair_poper_mapped_counter)+" pair proper mapped")
 
 #####################################################################  totally aligned read  ########################################################################
 not_totally_aligned_read={}
-totally_aligned_read_counter +=0
+totally_aligned_read_counter =0
 for key, value in dico.items() : 
     for v in value :
         if v[4] != ("[0-9][0-9][0-9]M" or "[0-9][0-9]M"): #if your CIGAR column does not contain 2 or 3 number followed by the letter M
@@ -116,6 +116,6 @@ for key, value in dico.items() :
            del dico[key] #the key is erased from the starting dictionnary
         else : 
             totally_aligned_read_counter += 1
-print("you have "+totally_aligned_read_counter+" read totally aligned ")
+print("you have "+str(totally_aligned_read_counter)+" read totally aligned ")
 #####################################################################  printing the final result ####################################################################
 print(dico)
