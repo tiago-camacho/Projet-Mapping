@@ -52,7 +52,7 @@ file.close()
 
 number_total_of_data_counter = 0
 for key, value in dico.items(): 
-    number_total_of_data_counter += len(value)#counting all your reads in the dico that we created
+    str(number_total_of_data_counter) += len(value)#counting all your reads in the dico that we created
 print("you have "+number_total_of_data_counter+" reads in total")#number total of reads
 
 #counting the total number of paired reads
