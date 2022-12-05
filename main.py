@@ -91,7 +91,7 @@ for key, value in dico.items() :
             bad_mapping_quality[key] = value #the read is stored in an other dictionnary in case you need it
             del dico[key] #the key is erased from the starting dictionnary 
         else : 
-      good_mapping_quality_number += 1
+            good_mapping_quality_number += 1
 print("you have "+good_mapping_quality_number+" mapping of good quality")
       
 ################################################################### number of pair proper mapped  ###################################################################
