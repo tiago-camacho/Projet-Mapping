@@ -58,10 +58,8 @@ print("you have "+str(number_total_of_data_counter)+" reads in total")#number to
 #counting the total number of paired reads
 number_of_paired_reads_data_counter = 0
 for key, value in dico.items(): 
-   if len(value != 2) : #if the key does not contains 2 values
-    number_of_paired_reads_data_counter += 0 #it didn't count the key because the read is not mated
-   else :
-    number_of_paired_reads_data_counter += 1 
+   if len(value == 2) : #if the key does not contains 2 values
+    number_of_paired_reads_data_counter += 1 #it didn't count the key because the read is not mated
 print("you have "+str(number_of_paired_reads_data_counter)+" paired reads")
 
 
