@@ -26,10 +26,13 @@ if os.path.isdir(sys.argv[1]) == 1: #if your path is a directory
                     break
         else :
             print("your file is empty")
+            break
     else :
         print("Please give a .sam file")
+        break
 else : 
     ("please give a file and not a directory")
+    break
 print("Your file seems correct")
   
 ##################################################### create a dictionnary of your file.sam  ########################################################################
@@ -114,6 +117,7 @@ for key, value in dico.items() :
            not_totally_aligned_read[key] = value #the value not totally aligned is stored in an other dictionnary in case you need it
            del dico[key] #the key is erased from the starting dictionnary
         else : 
-            totally_aligned_read_counter += 1
+      totally_aligned_read_counter += 1
 print("you have "+totally_aligned_read_counter+" read totally aligned ")
-    
+#####################################################################  printing the final result ####################################################################
+print(dico)
