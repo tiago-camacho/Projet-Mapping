@@ -100,7 +100,7 @@ pair_poper_mapped_counter += 0
 for key,value in dico.items():
     if int(value[0][0]) & 2==2 and int(value[1][0]) & 2==2 :#if your flag = 2 in both of your mate reads
         if (int(value[0][0]) & 16==16 and int(value[1][0]) & 32==32) or (int(value[0][0]) & 32==32 and int(value[1][0]) & 16==16) :#if they are mated
-            if abs((value [0][2])-(value[1][2]))<=sys.argv[2] #and if the distance is < or = your exigence
+            if abs((value [0][2])-(value[1][2]))<=sys.argv[2]: #and if the distance is < or = your exigence
                pair_poper_mapped_counter += 1
                 continue 
      else :
