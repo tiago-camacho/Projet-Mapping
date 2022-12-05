@@ -43,10 +43,10 @@ lines = file.readlines()#read line by line your file
 for line in lines:
     if line[0][0] != "@":#avoid first lines that are not reads
         temp =line.split("\t") #create a temporary variable that contain your line splited in columns
-           if temp[0] in dico.keys():#if the first column : the name of your read already exist in the dico 
-               dico[temp[0]].append(temp[1:])#it add all the other columns in the value as a list 
-                  else:
-                        dico[temp[0]]=[temp[1:]]#if it does not exist, create the key with the nam of the read and the list associated in value 
+        if temp[0] in dico.keys():#if the first column : the name of your read already exist in the dico 
+            dico[temp[0]].append(temp[1:])#it add all the other columns in the value as a list 
+        else:
+            dico[temp[0]]=[temp[1:]]#if it does not exist, create the key with the nam of the read and the list associated in value 
     
 file.close()
 
@@ -54,7 +54,7 @@ file.close()
 
 number_total_of_data_counter = 0
 for key, value in dico.items(): 
-number_total_of_data_counter += len(valeur)#counting all your reads in the dico that we created
+    number_total_of_data_counter += len(valeur)#counting all your reads in the dico that we created
 print("you have "+number_total_of_data_counter+" reads in total")#number total of reads
 
 #counting the total number of paired reads
@@ -62,8 +62,8 @@ number_of_paired_reads_data_counter += 0
 for key, value in dico.items(): 
    if key, value in dico.item() (!= 2) : #if the key does not contains 2 values
     number_of_paired_reads_data_counter += 0#it didn't count the key because the read is not mated
-    else :
-        number_of_paired_reads_data_counter += 1 
+   else :
+    number_of_paired_reads_data_counter += 1 
 print("you have "+number_of_paired_reads_data_counter+" paired reads)
 
 
