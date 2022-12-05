@@ -1,7 +1,17 @@
 #!/usr/bin/env python3
 #-*- coding: utf-8 -*-
 
+#___________authors_____________ ==> Tiago CAMACHO HENRIQUES and Allyson MOUREAUX 
+#___________contact_____________ ==> tiago.camacho-henriques@etu.umontpellier.fr and allyson.moureaux@etu.umontpellier.fr
+#___________version_____________ ==> 1.0
+#___________date________________ ==> 06/12/2022
+# We provide you a programm that sort your data from a sam file to extract reads properly mapped, mated, with the quality that you asked 
+# and undred percent aligned. We do not certify that the quality of our programm is optimal and without errors. We can't be responsible for any use of it 
+# but we hope that it can be useful. You can modify or share this programm as much as you like. 
+
+########################################################## Module importation #######################################################################################
 import sys, os
+
 ###########################################################  verification of your file  #############################################################################
 if os.path.isdir(sys.argv[1]) == 1: #if your path is a directory 
     if (sys.argv[1]).split(".")[-1] == "sam" :#if your filoe is a .sam
