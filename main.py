@@ -45,7 +45,7 @@ file.close()
 
 number_total_of_data_counter = 0
 for key, value in dico.items(): 
-number_total_of_data_counter += len(valeur)
+    number_total_of_data_counter += len(valeur)
 print("number_total_of_data_counter ="+number_total_of_data_counter)#number total of reads
 
 ##save this number into a summary file A FINIR J'ARRIVE PAS 
@@ -56,8 +56,8 @@ number_of_paired_reads_data_counter = 0
 for key, value in dico.items(): 
    if key, value in dico.item() (!= 2) :
     number_of_paired_reads_data_counter += 0
-    else :
-        number_of_paired_reads_data_counter += 1
+   else :
+    number_of_paired_reads_data_counter += 1
 print("number_of_paired_reads_data_counter = "+number_of_paired_reads_data_counter)
 
 
