@@ -38,6 +38,7 @@ print("Your file seems correct")
 ##################################################### create a dictionnary of your file.sam  ########################################################################
 
 dico = {}
+file = open(sys.argv[1], "r")
 lines = file.readlines()#read line by line your file
 
 for line in lines:
