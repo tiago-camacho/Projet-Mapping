@@ -68,7 +68,7 @@ pair_not_proper_mapped={}
 pair_mapped_counter = 0
 for key in dico.items() : 
   for v in value : #for the columns in the list contained in the value 
-    if v[0] & 4 != 4 : #if the flag (column 1) does not contains 4 (binary reading) 
+    if int(v[0]) & 4 != 4 : #if the flag (column 1) does not contains 4 (binary reading) 
         pair_mapped_counter += 0
         pair_not_proper_mapped[key] = value #the read is stored in an other dictionnary in case you need it
         del dico[key]#the key is erased from the starting dictionnary 
@@ -83,7 +83,7 @@ good_mapping_quality_number = 0
       
 for key, value in dico.items() : 
     for v in value :
-        if v[3] < sys.argv[3] or v[3] != [0-9] or v[3] != [0-9][0-9] or v[3] != [0-9][0-9][0-9]: #if mapping quality colon is under your exigence or not a number 
+        if int(v[3]) < sys.argv[3] or int(v[3]) != [0-9] or int(v[3]) != [0-9][0-9] or int(v[3]) != [0-9][0-9][0-9]: #if mapping quality colon is under your exigence or not a number 
             bad_mapping_quality[key] = value #the read is stored in an other dictionnary in case you need it
             del dico[key] #the key is erased from the starting dictionnary 
         else : 
