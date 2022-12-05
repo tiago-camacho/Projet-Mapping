@@ -7,8 +7,8 @@ if os.path.isdir(sys.argv[1]) == 1:
     if (sys.argv[1]).split(".")[-1] == "sam" :
         if os.path.getsize(sys.argv[1]) != 0 :
             file = open(sys.argv[1], "r")
-                for line in file :
-                    line_col = line.split("\t")
+            for line in file :
+                line_col = line.split("\t")
                     if len(line_col) >= 11 :
                         pass   
                     else  : 
