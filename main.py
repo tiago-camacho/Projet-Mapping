@@ -106,7 +106,6 @@ print("you have "+str(pair_proper_mapped_counter)+" pair proper mapped")
 totally_aligned_read_counter = 0
 for key, value in dico.items() :
     for v in value :
-        print(v[0])
         if re.match("[0-9]+M", v[4]) : #if your CIGAR column contain numbers followed by the letter M
             if key in final_data.keys():#if the first column : the name of your read already exist in the dico
                 final_data[key].append([value])#it add all the other columns in the value as a list
