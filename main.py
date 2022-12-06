@@ -6,8 +6,8 @@
 #___________version_____________ ==> 1.0
 #___________date________________ ==> 06/12/2022
 # We provide you a programm that sort your data from a sam file to extract reads properly mapped, mated, with the quality that you askedÂ 
-# and undred percent aligned. We do not certify that the quality of our programm is optimal and without errors. We can't be responsible for any use of itÂ 
-# but we hope that it can be useful. You can modify or share this programm as much as you like.Â 
+# and undred percent aligned. We do not certify that the quality of our programm is optimal and without errors. We can't be responsible for any use of it 
+# but we hope that it can be useful. You can modify or share this programm as much as you like. 
 
 ########################################################## Module importation #######################################################################################
 import sys, os, re
@@ -57,8 +57,8 @@ print("you have "+str(number_total_of_data_counter)+" reads in total")#number to
 #counting the total number of paired reads
 number_of_paired_reads_data_counter = 0
 for key, value in dico.items():
-   if len(value) == 2 : #if the key does not contains 2 values
-    number_of_paired_reads_data_counter += 1 #it didn't count the key because the read is not mated
+   if len(value) == 2 : #if the key does contains 2 values
+    number_of_paired_reads_data_counter += 1 #count the key
 print("you have "+str(number_of_paired_reads_data_counter)+" paired reads")
 
 
@@ -67,7 +67,7 @@ final_data={}
 pair_mapped_counter = 0
 for key in dico.items() :
   for v in value : #for the columns in the list contained in the value
-    if int(v[0]) & 4 != 4 : #if the flag (column 1) contains 4 (binary reading)
+    if int(v[0]) & 4 != 4 : #if the flag (column 1) does not contains 4 (binary reading)
         if key in final_data.keys():#if the first column : the name of your read already exist in the dico
             final_data[key].append([value])#it add all the other columns in the value as a list
         else:
@@ -81,9 +81,12 @@ good_mapping_quality_number = 0
 
 for key, value in dico.items() :
     for v in value :
-        if (int(v[3]) >= int(sys.argv[3])): #if mapping quality colon is > or = your exigence and good format
-            final_data[key] = value #the read is stored in an other dictionnary in case you need it
-            good_mapping_quality_number += 1
+        if (int(v[3]) >= int(sys.argv[3])): #if mapping quality colon is > or = your exigence
+            if key in final_data.keys():#if the first column : the name of your read already exist in the dico
+                final_data[key].append([value])#it add all the other columns in the value as a list
+            else:
+                final_data[key]=[[value]]#if it does not exist, create the key with the name of the read and the list associated in value
+         good_mapping_quality_number += 1
 print("you have "+str(good_mapping_quality_number)+" mapping of good quality")
       
 ################################################################### number of pair proper mapped  ###################################################################
@@ -104,7 +107,7 @@ totally_aligned_read_counter = 0
 for key, value in dico.items() :
     for v in value :
         print(v[0])
-        if re.match("[0-9]+M", v[4]) : #if your CIGAR column does not contain 2 or 3 number followed by the letter M
+        if re.match("[0-9]+M", v[4]) : #if your CIGAR column contain numbers followed by the letter M
             if key in final_data.keys():#if the first column : the name of your read already exist in the dico
                 final_data[key].append([value])#it add all the other columns in the value as a list
             else:
@@ -112,4 +115,4 @@ for key, value in dico.items() :
         totally_aligned_read_counter += 1
 print("you have "+str(totally_aligned_read_counter)+" read totally aligned ")
 #####################################################################  printing the final result ####################################################################
-print(dico)
+print(final_data)
