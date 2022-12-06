@@ -79,7 +79,7 @@ print("you have "+str(pair_mapped_counter)+" pair mapped")
 ################################################################## mapping quality #################################################################################
 bad_mapping_quality={}
 good_mapping_quality_number = 0
-      
+print(dico["Clone1-350000"])
 for key, value in dico.items() : 
     for v in value :
         if int(v[3]) < int(sys.argv[3]) or int(v[3]) != [0-9] or int(v[3]) != [0-9][0-9] or int(v[3]) != [0-9][0-9][0-9]: #if mapping quality colon is under your exigence or not a number 
