@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #-*- coding: utf-8 -*-
 
-#___________authors_____________ ==> Tiago CAMACHO HENRIQUES and Allyson MOUREAUXÂ 
+#___________authors_____________ ==> Tiago CAMACHO HENRIQUES and Allyson MOUREAUX 
 #___________contact_____________ ==> tiago.camacho-henriques@etu.umontpellier.fr and allyson.moureaux@etu.umontpellier.fr
 #___________version_____________ ==> 1.0
 #___________date________________ ==> 06/12/2022
