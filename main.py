@@ -70,7 +70,7 @@ for key in dico.items() :
   for v in value : #for the columns in the list contained in the value 
     if int(v[0]) & 4 != 4 : #if the flag (column 1) does not contains 4 (binary reading) 
         pair_not_proper_mapped[key] = value #the read is stored in an other dictionnary in case you need it
-        del dico[key]#the key is erased from the starting dictionnary 
+        del dico[key][value]#the key is erased from the starting dictionnary 
     else : 
         pair_mapped_counter += 1
 print("you have "+str(pair_mapped_counter)+" pair mapped")
